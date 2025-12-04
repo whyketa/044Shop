@@ -1,6 +1,11 @@
 .text-background:hover {
-  background: url("../images/logo_back_2.png");
+  background: url("../images/logo_back_2.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.laugh:hover + .message_3 {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }

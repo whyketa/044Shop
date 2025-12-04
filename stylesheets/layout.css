@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -8,16 +9,105 @@ body {
 }
 h1 {
   font-family: "Helmswald";
-  font-size: 180px;
+  font-size: 12.5vw;
   color: #000000;
-  width: 44vw;
-  height: auto;
+}
+p {
+  font-family: "Inter";
+  font-size: 2vw;
+  color: #000000;
+}
+.screen_1 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+}
+.block_1_screen_1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin: 14% 0;
 }
 .text-background {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  aspect-ratio: 662 / 280;
-  flex: 662;
-  background-image: url("../images/logo_back.png");
+  width: 46vw;
+  height: 19.5vw;
+  background-image: url("../images/logo_back.svg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 3vw;
+}
+.text-background h1 {
+  position: absolute;
+  size: contain;
+}
+.message_1 {
+  background-image: url("../images/window_1.svg");
+  background-size: cover;
+  width: 25.2vw;
+  height: 12.8vw;
+}
+.message_1 p {
+  text-align: center;
+}
+.message_1 p:nth-of-type(1) {
+  margin-top: 6vw;
+}
+.message_1 p:nth-of-type(2) {
+  margin-top: 1vw;
+  border: 0.139vw solid #2e0fe1;
+  background-color: #903838;
+}
+.message_2 {
+  background-image: url("../images/window_2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25.7vw;
+  height: 13.8vw;
+}
+.message_2 p {
+  margin-top: 5vw;
+  margin-left: 9vw;
+  text-align: left;
+}
+S .block_2_screen_1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* height: 100%; */
+  margin: 5% 0;
+  position: relative;
+  overflow: hidden;
+}
+.laugh {
+  background-image: url("../images/cat_1.svg");
+  width: 52.6vw;
+  height: 55vw;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: -20%;
+}
+.message_3 {
+  background-image: url("../images/window_3.svg");
+  background-size: cover;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  width: 24vw;
+  height: 11.9vw;
+}
+.message_3 p {
+  text-align: center;
+}
+.message_3 p:nth-of-type(1) {
+  padding-top: 5vw;
 }
