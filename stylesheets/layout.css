@@ -6,8 +6,18 @@ body {
   -moz-font-smoothing: grayscale;
   background-color: #1f1f1f;
 }
-.h1 {
-  font-family: "Inter";
+h1 {
+  font-family: "Helmswald";
   font-size: 180px;
   color: #000000;
+  width: 44vw;
+  height: auto;
+}
+.text-background {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  aspect-ratio: 662 / 280;
+  flex: 662;
+  background-image: url("../images/logo_back.png");
 }

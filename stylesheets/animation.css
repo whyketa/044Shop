@@ -1,0 +1,6 @@
+.text-background:hover {
+  background: url("../images/logo_back_2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
