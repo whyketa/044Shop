@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 body {
   -webkit-font-smoothing: antialiased;
@@ -15,7 +14,6 @@ h1 {
 p {
   font-family: "Inter";
   font-size: 2vw;
-  color: #000000;
 }
 .screen_1 {
   display: flex;
@@ -52,17 +50,26 @@ p {
   background-size: cover;
   width: 25.2vw;
   height: 12.8vw;
+  margin-right: 20vw;
+  margin-top: 6vw;
+  z-index: 99900;
 }
 .message_1 p {
   text-align: center;
 }
 .message_1 p:nth-of-type(1) {
-  margin-top: 6vw;
+  margin-top: 5vw;
 }
 .message_1 p:nth-of-type(2) {
-  margin-top: 1vw;
-  border: 0.139vw solid #2e0fe1;
-  background-color: #903838;
+  color: #ffffff !important;
+}
+.knopka_1 {
+  margin-top: 1.5vw;
+  border: 0.2vw solid #000000;
+  background-color: #fdabca;
+  width: 8.3vw;
+  height: 2vw;
+  margin-left: 8.5vw;
 }
 .message_2 {
   background-image: url("../images/window_2.svg");
@@ -71,6 +78,9 @@ p {
   background-position: center;
   width: 25.7vw;
   height: 13.8vw;
+  margin-left: 20vw;
+  margin-top: -5vw;
+  margin-bottom: 11.5vw;
 }
 .message_2 p {
   margin-top: 5vw;
@@ -92,8 +102,11 @@ S .block_2_screen_1 {
   height: 55vw;
   background-size: cover;
   position: absolute;
-  top: 0;
-  right: -20%;
+  margin-top: 5vw;
+  right: -8%;
+  transform: translateX(100%);
+  opacity: 0;
+  animation: slideInOut 3s linear infinite;
 }
 .message_3 {
   background-image: url("../images/window_3.svg");
@@ -104,10 +117,23 @@ S .block_2_screen_1 {
   transition: all 0.3s ease;
   width: 24vw;
   height: 11.9vw;
+  margin-top: 51vw;
+  margin-left: 6.5vw;
 }
 .message_3 p {
   text-align: center;
 }
 .message_3 p:nth-of-type(1) {
   padding-top: 5vw;
+}
+.message_3 p:nth-of-type(2) {
+  padding-top: 4vw;
+}
+.knopka_2 {
+  border: 0.2vw solid #000000;
+  background-color: #fdabca;
+  width: 8.3vw;
+  height: 2vw;
+  margin-left: 8.5vw;
+  margin-top: 1.5vw;
 }

@@ -9,3 +9,34 @@
   visibility: visible;
   transform: translateY(0);
 }
+@keyframes slideInOut {
+  /* Кадр 1: Начало (за экраном) */
+  0% {
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  /* Кадр 2: Появился наполовину */
+  25% {
+    transform: translateX(75%);
+    opacity: 1;
+  }
+
+  /* Кадр 3: Почти выехал */
+  50% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+
+  /* Кадр 4: Практически на месте */
+  75% {
+    transform: translateX(25%);
+    opacity: 1;
+  }
+
+  /* Кадр 5: Финальная позиция */
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
