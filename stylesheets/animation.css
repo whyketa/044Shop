@@ -16,27 +16,51 @@
     opacity: 1;
   }
 
-  /* Кадр 2: Появился наполовину */
-  25% {
-    transform: translateX(75%);
-    opacity: 1;
-  }
-
-  /* Кадр 3: Почти выехал */
-  50% {
-    transform: translateX(50%);
-    opacity: 1;
-  }
-
-  /* Кадр 4: Практически на месте */
-  75% {
-    transform: translateX(25%);
-    opacity: 1;
-  }
-
   /* Кадр 5: Финальная позиция */
   100% {
     transform: translateX(0);
     opacity: 1;
   }
+}
+@keyframes slideShow {
+  0%,
+  33% {
+    background-image: url("../images/man_1.svg");
+  }
+  34%,
+  66% {
+    background-image: url("../images/man_2.svg");
+  }
+  67%,
+  100% {
+    background-image: url("../images/man_3.svg");
+  }
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 30px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%); /* Начинаем слева за пределами */
+  }
+  100% {
+    transform: translateX(100%); /* Заканчиваем справа за пределами */
+  }
+}
+
+/* Остановка при наведении */
+.block_1_screen_3:hover .marquee-text_1 {
+  animation-play-state: paused;
+}
+
+/* Дополнительные стили для красоты */
+.block_1_screen_3:hover {
+  cursor: pointer;
 }

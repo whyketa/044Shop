@@ -5,10 +5,21 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: grayscale;
   background-color: #1f1f1f;
+  overflow-x: hidden;
 }
 h1 {
   font-family: "Helmswald";
   font-size: 12.5vw;
+  color: #000000;
+}
+h2 {
+  font-family: "Helmswald";
+  font-size: 7.45vw;
+  color: #000000;
+}
+h3 {
+  font-family: "Inter";
+  font-size: 3.64vw;
   color: #000000;
 }
 p {
@@ -20,6 +31,8 @@ p {
   width: 100%;
   height: 100%;
   gap: 0;
+  margin: 2.6vw;
+  overflow: hidden;
 }
 .block_1_screen_1 {
   display: flex;
@@ -27,7 +40,6 @@ p {
   align-items: center;
   width: 50%;
   height: 100%;
-  margin: 14% 0;
 }
 .text-background {
   background-size: contain;
@@ -48,7 +60,7 @@ p {
 .message_1 {
   background-image: url("../images/window_1.svg");
   background-size: cover;
-  width: 25.2vw;
+  width: 26vw;
   height: 12.8vw;
   margin-right: 20vw;
   margin-top: 6vw;
@@ -57,14 +69,17 @@ p {
 .message_1 p {
   text-align: center;
 }
-.message_1 p:nth-of-type(1) {
+.message_1 > p {
   margin-top: 5vw;
+}
+.message_1 button p {
+  line-height: 0.4;
 }
 .message_1 p:nth-of-type(2) {
   color: #ffffff !important;
 }
 .knopka_1 {
-  margin-top: 1.5vw;
+  margin-top: 1.2vw;
   border: 0.2vw solid #000000;
   background-color: #fdabca;
   width: 8.3vw;
@@ -87,12 +102,12 @@ p {
   margin-left: 9vw;
   text-align: left;
 }
-S .block_2_screen_1 {
+.block_2_screen_1 {
   display: flex;
   flex-direction: column;
   width: 50%;
   /* height: 100%; */
-  margin: 5% 0;
+
   position: relative;
   overflow: hidden;
 }
@@ -102,11 +117,10 @@ S .block_2_screen_1 {
   height: 55vw;
   background-size: cover;
   position: absolute;
-  margin-top: 5vw;
   right: -8%;
   transform: translateX(100%);
   opacity: 0;
-  animation: slideInOut 3s linear infinite;
+  animation: slideInOut 6s ease alternate infinite;
 }
 .message_3 {
   background-image: url("../images/window_3.svg");
@@ -115,19 +129,19 @@ S .block_2_screen_1 {
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.3s ease;
-  width: 24vw;
-  height: 11.9vw;
+  width: 26.3vw;
+  height: 13vw;
   margin-top: 51vw;
   margin-left: 6.5vw;
 }
 .message_3 p {
   text-align: center;
 }
-.message_3 p:nth-of-type(1) {
-  padding-top: 5vw;
+.message_3 > p {
+  margin-top: 5vw;
 }
-.message_3 p:nth-of-type(2) {
-  padding-top: 4vw;
+.message_3 button p {
+  line-height: 0.4;
 }
 .knopka_2 {
   border: 0.2vw solid #000000;
@@ -135,5 +149,262 @@ S .block_2_screen_1 {
   width: 8.3vw;
   height: 2vw;
   margin-left: 8.5vw;
-  margin-top: 1.5vw;
+  margin-top: 1.3vw;
+}
+.screen_2 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  flex-direction: column;
+  background-color: #70d6d8;
+  border-radius: 1.3vw;
+  margin: 2.6vw;
+  background-position: center;
+  width: 94.7vw;
+  height: 51vw;
+  overflow: hidden;
+}
+.block_1_screen_2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.text-background_2 {
+  padding-top: 2.5vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 83.64vw;
+  height: 11.86vw;
+  background-image: url("../images/header_back.svg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.text-background h1 {
+  position: absolute;
+  size: contain;
+}
+.screen_2_block-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.block_2_screen_2 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-size: contain;
+  animation: slideShow 5s infinite;
+  background-position: center;
+}
+.block_3_screen_2 {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.message_4 {
+  background-image: url("../images/window_4.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 26.6vw;
+  height: 14.7vw;
+}
+.message_5_1 {
+  background-image: url("../images/window_5.svg");
+  width: 21.6vw;
+  height: 8.71vw;
+}
+.message_5_2 {
+  background-image: url("../images/window_5.svg");
+  width: 21.6vw;
+  height: 8.71vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.message_5_3 {
+  background-image: url("../images/window_5.svg");
+  width: 21.6vw;
+  height: 8.71vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.message_5_4 {
+  background-image: url("../images/window_5.svg");
+  width: 21.6vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 8.71vw;
+}
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.runner {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: move 2s ease-in-out infinite alternate;
+}
+
+.screen_3 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  flex-direction: column;
+  margin: 2.6vw;
+  background-position: center;
+  width: 94.7vw;
+  height: 51vw;
+  overflow: hidden;
+}
+.block_1_screen_3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 1.3vw;
+  width: 100%;
+  height: 5.2vw;
+}
+
+.marquee-text_1 {
+  margin-top: 0.5vw;
+  display: inline-block;
+  padding-right: 100%;
+  animation: marquee 15s linear infinite;
+}
+.screen_3_block-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.block_2_screen_3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 1.3vw;
+  width: 100%;
+  height: 43vw;
+  margin-top: 2.6vw;
+  background-image: url("../images/crown.svg");
+  background-image: url("../images/sword.svg");
+  background-image: url("../images/helmet.svg");
+  flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.block_3_screen_3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #fdabca;
+  border-radius: 1.3vw;
+  width: 100%;
+  height: 43vw;
+  margin-top: 2.6vw;
+  margin-left: 2.6vw;
+}
+.block_4_screen_3 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ffffff;
+  border-radius: 1.3vw;
+  width: 100%;
+  height: 43vw;
+  margin-top: 2.6vw;
+  margin-left: 2.6vw;
+  background-image: url("../images/balalaika.svg");
+  background-image: url("../images/book.svg");
+  background-image: url("../images/map.svg");
+  flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.screen_4 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 0;
+  flex-direction: column;
+  margin: 2.6vw;
+  background-position: center;
+  width: 94.7vw;
+  height: 51vw;
+  overflow: hidden;
+}
+.block_1_screen_4 {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 1.3vw;
+  width: 100%;
+  height: 9.38vw;
+}
+.text-background_3 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 83.64vw;
+  height: 11.86vw;
+  background-image: url("../images/header_back_2.svg");
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.screen_4_block-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.block_2_screen_4 {
+  background-image: url("../images/vector_crown.svg");
+  background-image: url("../images/cat_2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  height: 40vw;
+  margin-top: 2.6vw;
+}
+.block_3_screen_4 {
+  background-image: url("../images/cat_3.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #70d6d8;
+  border-radius: 1.3vw;
+  width: 50%;
+  height: 40vw;
+  margin-top: 2.6vw;
 }
