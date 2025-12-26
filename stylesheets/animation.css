@@ -54,7 +54,34 @@
     transform: translateX(100%); /* Заканчиваем справа за пределами */
   }
 }
+@keyframes slideShow2 {
+  0%,
+  33% {
+    background-image: url("../images/helmet.svg");
+  }
+  34%,
+  66% {
+    background-image: url("../images/sword.svg");
+  }
+  67%,
+  100% {
+    background-image: url("../images/crown.svg");
+  }
+}
+.block_2_screen_3:hover {
+  animation-play-state: paused;
+}
 
+@keyframes falling {
+  0% {
+    top: -5.2vw;
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    top: 100vh; /* Падают до низа экрана */
+    transform: translateY(0) rotate(360deg);
+  }
+}
 /* Остановка при наведении */
 .block_1_screen_3:hover .marquee-text_1 {
   animation-play-state: paused;
@@ -63,4 +90,61 @@
 /* Дополнительные стили для красоты */
 .block_1_screen_3:hover {
   cursor: pointer;
+}
+
+.falling-item:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+  z-index: 100;
+  background: white;
+}
+.crown-kota:hover {
+  background: url("../images/vector_crown_2.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@keyframes slideInOut2 {
+  /* Кадр 1: Начало (за экраном) */
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  /* Кадр 5: Финальная позиция */
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes marquee2 {
+  0% {
+    transform: translateX(-100%); /* Начинаем слева за пределами */
+  }
+  100% {
+    transform: translateX(100%); /* Заканчиваем справа за пределами */
+  }
+}
+
+/* Остановка при наведении */
+.block_1_screen_5:hover .marquee-text_2 {
+  animation-play-state: paused;
+}
+
+/* Дополнительные стили для красоты */
+.block_1_screen_5:hover {
+  cursor: pointer;
+}
+
+@keyframes numbers {
+  0% {
+    content: "0%";
+  }
+  50% {
+    content: "50%";
+  }
+  100% {
+    content: "100%";
+  }
 }
