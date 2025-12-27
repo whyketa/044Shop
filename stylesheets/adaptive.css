@@ -1,50 +1,109 @@
-/* @media screen and (max-width: 1279px) {
-  .screen_1,
-  .screen_2,
-  .screen_3,
-  .screen_4,
-  .screen_5,
-  .footer {
-    margin: 3.12vw;
+/* 1) Desktop large: 1920+ (обычно ничего не надо) */
+@media (min-width: 1600px) {
+  .page {
+    width: min(1400px, 90vw);
   }
 }
-@media screen and (max-width: 1023px) {
-  .screen_1,
-  .screen_2,
-  .screen_3,
-  .screen_4,
-  .screen_5,
-  .footer {
-    margin: 3.9vw;
+
+/* 2) Desktop / laptop: 1366–1599 */
+@media (max-width: 1366px) {
+  /* чуть уменьшаем крупные элементы */
+  .king-man_animation {
+    left: -12vw;
   }
 }
-@media screen and (min-width: 768px) {
-  .screen_1,
-  .screen_2,
-  .screen_3,
-  .screen_4,
-  .screen_5,
-  .footer {
-    margin: 3.9vw;
+
+/* 3) 1280–1024 (small desktop / tablet landscape) */
+@media (max-width: 1024px) {
+  /* всё, что было 50% — делаем шире */
+  .block_3_screen_4,
+  .block_3_screen_5 {
+    width: 100%;
+  }
+
+  /* фиксируем высоты, чтобы не ломалось */
+  .block_3_screen_4 {
+    height: 55vw;
   }
 }
-@media screen and (min-width: 414px) {
-  .screen_1,
-  .screen_2,
-  .screen_3,
-  .screen_4,
-  .screen_5,
-  .footer {
-    margin: 4.8vw;
+
+/* 4) Tablet portrait: 768 */
+@media (max-width: 768px) {
+  :root {
+    --radius: 16px;
+  }
+
+  .page {
+    width: 94vw;
+  }
+
+  /* один столбец */
+  .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  /* UI-окна/поиск делаем почти во всю ширину */
+  .typing {
+    width: 92%;
+    height: 56px;
+    border-radius: 999px;
+  }
+  .numbers {
+    width: 80%;
+  }
+  .lore {
+    width: 90%;
+  }
+
+  /* персонажей с absolute — уменьшаем и двигаем */
+  .king-man_animation {
+    width: 60vw;
+    height: 90vw;
+    left: -8vw;
   }
 }
-@media screen and (min-width: 360px) {
-  .screen_1,
-  .screen_2,
-  .screen_3,
-  .screen_4,
-  .screen_5,
-  .footer {
-    margin: 5.5vw;
+
+/* 5) iPhone 414 */
+@media (max-width: 414px) {
+  h1,
+  h2 {
+    font-size: 28px;
   }
-} */
+  p {
+    font-size: 16px;
+  }
+
+  .block_3_screen_4 {
+    height: 120vw;
+  }
+
+  .typing {
+    width: 92vw;
+    height: 52px;
+  }
+  .numbers {
+    width: 92vw;
+    height: 44vw;
+  }
+  .lore {
+    width: 92vw;
+    height: 40vw;
+  }
+
+  .king-man_animation {
+    width: 75vw;
+    height: 110vw;
+    left: -20vw;
+  }
+}
+
+/* 6) Android 360 */
+@media (max-width: 360px) {
+  .typing {
+    height: 48px;
+  }
+  .block_3_screen_4 {
+    height: 130vw;
+  }
+}
