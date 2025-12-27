@@ -278,7 +278,7 @@
     font-size: 3.6vw;
   }
   h1 {
-    font-size: 24.1vw;
+    font-size: 20vw;
   }
   h2 {
     font-size: 14.5vw;
@@ -386,6 +386,7 @@
     width: 3.5vw;
     height: 7vw;
     left: 30vw;
+    top: 1vw;
   }
 
   .messages_5 {
@@ -504,18 +505,18 @@
 
   .style-king_p1 {
     width: 30vw;
-    height: 3vw;
+    height: 5vw;
     left: 50%;
     transform: translateX(-50%);
     top: 10vw;
   }
 
   .style-king_p2 {
-    width: 25vw;
-    height: 3vw;
+    width: 35vw;
+    height: 5vw;
     left: 50%;
     transform: translateX(-50%);
-    top: 43vw;
+    top: 45vw;
   }
 
   .style-king {
