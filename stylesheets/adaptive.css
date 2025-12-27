@@ -1,4 +1,4 @@
-/* ===================== TABLET (<=768) ===================== */
+/* TABLET */
 @media (max-width: 768px) {
   p {
     font-size: 2.6vw;
@@ -12,7 +12,6 @@
   h3 {
     font-size: 3.9vw;
   }
-  /* общие контейнеры */
   .screen_2,
   .screen_3,
   .screen_4,
@@ -22,7 +21,7 @@
     height: auto;
   }
 
-  /* 1 экран: 2 колонки -> 1 */
+  /* 1 экран*/
   .screen_1 {
     flex-direction: column;
     width: 92vw;
@@ -99,16 +98,32 @@
   left: 50%;
   transform: translateX(-50%);
   top: 6vw;
+  display: grid;
+  grid-template-columns: 3.2vw 1fr;
+  grid-template-rows: auto auto 1fr;
+  column-gap: 0;
+  row-gap: 1vw;
+  padding-top: 10vw;
+  padding-left: 25vw;
+  padding-right: 5vw;
+  box-sizing: border-box;
+}
+
+.message_4 > .text-line {
+  width: 45vw;
+  justify-self: start;
 }
 .message_4 > p,
 .text-line {
   font-size: 1.95vw;
   height: 6vw;
 }
+
 .runner {
   width: 3.5vw;
   height: 7vw;
-  margin-top: 2vw;
+  margin-top: 0.2vw;
+  left: 30vw;
 }
 .messages_5 {
   top: 55vw;
@@ -128,7 +143,7 @@
   font-size: 4.2vw;
 }
 
-/* 3 экран: карточки в колонку */
+/* 3 экран */
 .screen_3 {
   height: auto;
   flex-direction: column;
@@ -141,6 +156,7 @@
   width: 100%;
   height: 22.78vw;
   margin-left: 0;
+  float: row;
 }
 .block_3_screen_3 {
   width: 100%;
@@ -152,6 +168,58 @@
   height: 90vw;
   padding: 30;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.falling-item {
+  position: absolute;
+  top: -10vw;
+  padding: 1.2vw 2.4vw;
+  background: #fdabca;
+  border-radius: 50px;
+  white-space: nowrap;
+
+  animation: fall 6s linear infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-10vw);
+  }
+  100% {
+    transform: translateY(120vw);
+  }
+}
+.falling-item:nth-child(odd) {
+  animation-duration: 5s;
+  transform: rotate(-10deg);
+}
+.falling-item:nth-child(even) {
+  animation-duration: 7s;
+  transform: rotate(12deg);
+}
+.falling-item:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+}
+.falling-item:nth-child(2) {
+  left: 20%;
+  animation-delay: 1s;
+}
+.falling-item:nth-child(3) {
+  left: 35%;
+  animation-delay: 2s;
+}
+.falling-item:nth-child(4) {
+  left: 50%;
+  animation-delay: 3s;
+}
+.falling-item:nth-child(5) {
+  left: 65%;
+  animation-delay: 4s;
+}
+.falling-item:nth-child(6) {
+  left: 80%;
+  animation-delay: 5s;
 }
 .selective-item_1,
 .selective-item_2,
@@ -161,58 +229,44 @@
   margin-left: 10vw;
 }
 
-/* 4 экран: 2 колонки -> 1 */
+/* 4 экран */
 .screen_4 {
   height: auto;
 }
 .screen_4_block-container {
-  flex-direction: column;
+  flex-direction: row;
 }
-.block_2_screen_4,
-.block_3_screen_4 {
+.block_2_screen_4 {
   width: 100%;
   height: 110vw;
 }
+.block_3_screen_4 {
+  width: 46vw;
+  height: 105vw;
+  position: relative;
+}
+.crown-kota {
+  margin-top: 40vw;
+}
+
 .jump {
-  width: 70vw;
-  height: 110vw;
-  left: 10vw;
+  width: 43vw;
+  height: 63vw;
+  left: 2vw;
+  bottom: -2vw;
 }
 .dragon {
   width: 35vw;
   height: 85vw;
-  right: 4vw;
-  top: 18vw;
+  right: 0vw;
+  top: 27vw;
 }
 .typing {
-  width: 84vw;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 6vw;
-  height: 12vw;
-  border-radius: 999px;
-}
-.icon {
-  width: 5vw;
-  height: 4vw;
+  position: absolute;
   right: 4vw;
 }
-.numbers {
-  width: 78vw;
-  height: 40vw;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 22vw;
-}
-.lore {
-  width: 84vw;
-  height: 38vw;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 72vw;
-}
 
-/* 5 экран: 2 колонки -> 1 */
+/* 5 экран*/
 .screen_5_block-container {
   flex-direction: column;
 }
@@ -222,28 +276,49 @@
 .block_3_screen_5 {
   width: 100%;
   height: 110vw;
+  position: relative;
 }
 .king-man_animation {
-  width: 70vw;
-  height: 95vw;
-  left: -10vw;
-  top: 10vw;
+  width: 40vw;
+  height: 65vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 53vw;
 }
+
 .style-king_p1 {
-  width: 60vw;
-  height: 12vw;
-  left: 20vw;
-  top: 18vw;
+  width: 23vw;
+  height: 3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 17vw;
 }
+
 .style-king_p2 {
-  width: 64vw;
-  height: 12vw;
-  left: 18vw;
-  bottom: 18vw;
+  width: 25vw;
+  height: 3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 43vw;
 }
+
 .style-king {
-  left: 22vw;
-  top: 40vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 24vw;
+  text-align: center;
+  width: 100%;
+}
+.star_5 {
+  width: 5.2vw;
+  height: 5.2vw;
+  left: 50%;
+}
+.star_6 {
+  width: 5.2vw;
+  height: 5.2vw;
+  left: 50%;
+  top: 50vw;
 }
 
 /* footer */
@@ -282,7 +357,7 @@
   top: 8.7vw;
 }
 
-/* ===================== MOBILE (<=414) ===================== */
+/*  MOBILE */
 @media (max-width: 414px) {
   p {
     font-size: 3.6vw;
@@ -302,8 +377,12 @@
   .screen_5 {
     width: 94vw;
   }
+  /*1 экран*/
+  .message_3 {
+    display: none;
+  }
 
-  /* 2 экран: чтобы не было "каши" */
+  /* 2 экран*/
   .block_1_screen_2 {
     display: none;
   }
@@ -358,18 +437,5 @@
   /* footer */
   .name {
     height: 38vw;
-  }
-}
-
-/* ===================== SMALL MOBILE (<=360) ===================== */
-@media (max-width: 360px) {
-  .typing {
-    height: 13vw;
-  }
-  .block_2_screen_4,
-  .block_3_screen_4,
-  .block_2_screen_5,
-  .block_3_screen_5 {
-    height: 165vw;
   }
 }
