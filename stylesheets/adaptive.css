@@ -1,59 +1,375 @@
+/* ===================== TABLET (<=768) ===================== */
 @media (max-width: 768px) {
-  /*первый экран*/
-  .screen {
-    flex-direction: column;
+  p {
+    font-size: 2.6vw;
   }
-  .block_1_screen_1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 50%;
+  h1 {
+    font-size: 16.9vw;
   }
-  .block_2_screen_1 {
-    display: flex;
+  h2 {
+    font-size: 11.7vw;
+  }
+  h3 {
+    font-size: 3.9vw;
+  }
+  /* общие контейнеры */
+  .screen_2,
+  .screen_3,
+  .screen_4,
+  .screen_5 {
+    width: 92vw;
+    margin: 3.9vw auto;
+    height: auto;
+  }
+
+  /* 1 экран: 2 колонки -> 1 */
+  .screen_1 {
     flex-direction: column;
-    width: 100%;
-    height: 50%;
-    position: relative;
+    width: 92vw;
     overflow: hidden;
   }
-  /*второй экран*/
-  .screen_2 {
-    width: 90vw;
-    height: 125vw;
-  }
-  .block_1_screen_2 {
-    display: none;
-  }
-  .screen_2_block-container {
-    flex-direction: column-reverse;
-  }
-  .star_1,
-  .star_2,
-  .star_3,
-  .star_4 {
-    width: 5.2vw;
-    height: 5.2vw;
-  }
-  .block_2_screen_2 {
+
+  .block_1_screen_1,
+  .block_2_screen_1 {
     width: 100%;
-    height: 100%;
+    height: auto;
   }
-  .block_3_screen_2 {
-    margin: 5.2vw auto;
-    width: 85.67vw;
-    height: 100%;
+
+  .block_2_screen_1 {
+    overflow: visible;
+    min-height: 82vw;
   }
-  .skin {
-    width: 46.6vw;
-    height: 64.84vw;
-    justify-content: center;
-    margin-top: -2vw;
-    position: absolute;
-    left: 5vw;
+  .text-background {
+    width: 72vw;
+    height: 30.2vw;
+    padding-top: 4vw;
+  }
+  .message_1,
+  .message_2,
+  .message_3 {
+    width: 36vw;
+    height: 17.83vw;
+    margin: 2.5vw auto;
+  }
+  .message_1 {
+    margin-right: 0;
+  }
+  .message_2 {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .message_3 {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .laugh {
+    width: 74vw;
+    height: 73vw;
+    right: -20vw;
+    top: 6vw;
   }
 }
 
+.screen_2 {
+  height: auto;
+}
+.block_1_screen_2 {
+  display: none;
+}
+.screen_2_block-container {
+  flex-direction: column-reverse;
+}
+.block_2_screen_2,
+.block_3_screen_2 {
+  width: 100%;
+  height: 90vw;
+}
+.skin {
+  width: 80vw;
+  height: 70vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10vw;
+  margin-top: 0;
+}
+.message_4 {
+  width: 78vw;
+  height: 43vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6vw;
+}
+.message_4 > p,
+.text-line {
+  font-size: 1.95vw;
+  height: 6vw;
+}
+.runner {
+  width: 3.5vw;
+  height: 7vw;
+  margin-top: 2vw;
+}
+.messages_5 {
+  top: 55vw;
+  right: 2vw;
+}
+.message_5_1,
+.message_5_2,
+.message_5_3,
+.message_5_4 {
+  width: 70vw;
+  height: 27vw;
+}
+.message_5_1 p,
+.message_5_2 p,
+.message_5_3 p,
+.message_5_4 p {
+  font-size: 4.2vw;
+}
+
+/* 3 экран: карточки в колонку */
+.screen_3 {
+  height: auto;
+  flex-direction: column;
+}
+.screen_3_block-container {
+  flex-direction: column;
+}
+.block_2_screen_3,
+.block_4_screen_3 {
+  width: 100%;
+  height: 22.78vw;
+  margin-left: 0;
+}
+.block_3_screen_3 {
+  width: 100%;
+  height: 57vw;
+  margin-left: 0;
+}
+.animated-item {
+  width: 60vw;
+  height: 90vw;
+  padding: 30;
+  margin: 0 auto;
+}
+.selective-item_1,
+.selective-item_2,
+.selective-item_3 {
+  width: 30vw;
+  height: 28vw;
+  margin-left: 10vw;
+}
+
+/* 4 экран: 2 колонки -> 1 */
+.screen_4 {
+  height: auto;
+}
+.screen_4_block-container {
+  flex-direction: column;
+}
+.block_2_screen_4,
+.block_3_screen_4 {
+  width: 100%;
+  height: 110vw;
+}
+.jump {
+  width: 70vw;
+  height: 110vw;
+  left: 10vw;
+}
+.dragon {
+  width: 35vw;
+  height: 85vw;
+  right: 4vw;
+  top: 18vw;
+}
+.typing {
+  width: 84vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 6vw;
+  height: 12vw;
+  border-radius: 999px;
+}
+.icon {
+  width: 5vw;
+  height: 4vw;
+  right: 4vw;
+}
+.numbers {
+  width: 78vw;
+  height: 40vw;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 22vw;
+}
+.lore {
+  width: 84vw;
+  height: 38vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 72vw;
+}
+
+/* 5 экран: 2 колонки -> 1 */
+.screen_5_block-container {
+  flex-direction: column;
+}
+.block_2_screen_5 {
+  display: none;
+}
+.block_3_screen_5 {
+  width: 100%;
+  height: 110vw;
+}
+.king-man_animation {
+  width: 70vw;
+  height: 95vw;
+  left: -10vw;
+  top: 10vw;
+}
+.style-king_p1 {
+  width: 60vw;
+  height: 12vw;
+  left: 20vw;
+  top: 18vw;
+}
+.style-king_p2 {
+  width: 64vw;
+  height: 12vw;
+  left: 18vw;
+  bottom: 18vw;
+}
+.style-king {
+  left: 22vw;
+  top: 40vw;
+}
+
+/* footer */
+.footer {
+  overflow: hidden;
+  height: auto;
+}
+.block_1_footer {
+  white-space: nowrap;
+  justify-content: center;
+}
+.block_2_footer {
+  height: 20vw;
+}
+.footer-item_1,
+.footer-item_2,
+.footer-item_3,
+.footer-item_4,
+.footer-item_5,
+.footer-item_6,
+.footer-item_7,
+.footer-item_8 {
+  position: relative;
+  display: block;
+  transform-origin: 50% 10%;
+  animation: sway2 2.2s ease-in-out infinite;
+}
+.name {
+  width: 92vw;
+  height: 30vw;
+}
+.name-text {
+  font-size: 7.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 8.7vw;
+}
+
+/* ===================== MOBILE (<=414) ===================== */
 @media (max-width: 414px) {
+  p {
+    font-size: 3.6vw;
+  }
+  h1 {
+    font-size: 24.1vw;
+  }
+  h2 {
+    font-size: 14.5vw;
+  }
+  h3 {
+    font-size: 7.25vw;
+  }
+  .screen_2,
+  .screen_3,
+  .screen_4,
+  .screen_5 {
+    width: 94vw;
+  }
+
+  /* 2 экран: чтобы не было "каши" */
+  .block_1_screen_2 {
+    display: none;
+  }
+
+  .block_2_screen_2,
+  .block_3_screen_2 {
+    height: 130vw;
+  }
+  .message_4 {
+    height: 52vw;
+    padding-top: 10vw;
+    padding-left: 20vw;
+  }
+  .messages_5 {
+    top: 82vw;
+  }
+  .message_5_1,
+  .message_5_2,
+  .message_5_3,
+  .message_5_4 {
+    height: 30vw;
+  }
+
+  /* 4 экран */
+  .block_2_screen_4,
+  .block_3_screen_4 {
+    height: 150vw;
+  }
+  .numbers {
+    margin-top: 30vw;
+  }
+  .lore {
+    top: 102vw;
+  }
+
+  /* 5 экран */
+  .block_2_screen_5 {
+    display: none;
+  }
+  .block_3_screen_5 {
+    height: 150vw;
+  }
+  .king-man_animation {
+    width: 85vw;
+    left: -20vw;
+  }
+  .style-king_p1,
+  .style-king_p2 {
+    left: 12vw;
+  }
+
+  /* footer */
+  .name {
+    height: 38vw;
+  }
+}
+
+/* ===================== SMALL MOBILE (<=360) ===================== */
+@media (max-width: 360px) {
+  .typing {
+    height: 13vw;
+  }
+  .block_2_screen_4,
+  .block_3_screen_4,
+  .block_2_screen_5,
+  .block_3_screen_5 {
+    height: 165vw;
+  }
 }
