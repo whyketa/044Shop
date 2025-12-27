@@ -10,13 +10,10 @@
   transform: translateY(0);
 }
 @keyframes slideInOut {
-  /* Кадр 1: Начало (за экраном) */
   0% {
     transform: translateX(100%);
     opacity: 1;
   }
-
-  /* Кадр 5: Финальная позиция */
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -42,7 +39,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(10vw); /* расстояние движения */
+    transform: translateX(10vw);
   }
 }
 @keyframes wordsYou {
@@ -113,7 +110,7 @@
     transform: translateY(0) rotate(0deg);
   }
   100% {
-    top: 100vh; /* Падают до низа экрана */
+    top: 100vh;
     transform: translateY(0) rotate(360deg);
   }
 }
@@ -176,11 +173,9 @@
   z-index: 100;
   background: white;
 }
-/* Дополнительные стили для красоты */
 .block_1_screen_3:hover {
   cursor: pointer;
 }
-/* Остановка при наведении */
 .block_1_screen_3:hover .marquee-text_1 {
   animation-play-state: paused;
 }
@@ -213,7 +208,7 @@
   content: attr(data-tooltip);
   position: absolute;
 
-  left: 100%; /* справа от элемента */
+  left: 100%;
   top: 50%;
 
   transform: translateX(-50%);
@@ -229,8 +224,6 @@
   pointer-events: none;
   transition: opacity 0.2s ease;
 }
-
-/* при наведении */
 .selective-item_1:hover::after,
 .selective-item_2:hover::after,
 .selective-item_3:hover::after {
@@ -245,13 +238,10 @@
 }
 
 @keyframes slideInOut2 {
-  /* Кадр 1: Начало (за экраном) */
   0% {
     transform: translateY(100%);
     opacity: 1;
   }
-
-  /* Кадр 5: Финальная позиция */
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -265,13 +255,9 @@
     transform: translateX(0);
   }
 }
-
-/* Остановка при наведении */
 .block_1_screen_5:hover .marquee-text_2 {
   animation-play-state: paused;
 }
-
-/* Дополнительные стили для красоты */
 .block_1_screen_5:hover {
   cursor: pointer;
 }
@@ -311,7 +297,6 @@
     content: "100%";
   }
 }
-/* ТУТ будет появляться текст */
 #searching .nabor::after {
   content: "самый крутой персонаж";
   display: inline-block;
@@ -321,8 +306,6 @@
   border-right: 0.1vw solid #000;
   animation: type 6s steps(22) infinite, blink 0.75s step-end infinite;
 }
-
-/* печать: пусто -> напечаталось -> пауза -> снова пусто */
 @keyframes type {
   0% {
     width: 0;
@@ -364,7 +347,6 @@
     opacity: 0;
   }
 }
-
 @keyframes catJumpA {
   0% {
     right: -20vw;
@@ -429,7 +411,6 @@
     rotate: 20deg;
   }
 }
-
 @keyframes marquee3 {
   from {
     transform: translateX(0);

@@ -26,12 +26,14 @@ p {
   font-family: "Inter";
   font-size: 2vw;
 }
+
+/*первый экран*/
 .screen_1 {
   display: flex;
   /* width: 100%; */
   height: 100%;
   gap: 0;
-  /* margin: 2.6vw; */
+  margin: 2.6vw auto;
   overflow: hidden;
   background-image: url("../images/pattern_1.svg");
   background-size: cover;
@@ -151,6 +153,8 @@ p {
   margin-left: 8.5vw;
   margin-top: 1.3vw;
 }
+
+/*второй экран*/
 .screen_2 {
   display: flex;
   width: 100%;
@@ -159,7 +163,7 @@ p {
   flex-direction: column;
   background-color: #70d6d8;
   border-radius: 1.3vw;
-  margin: 2.6vw;
+  margin: 2.6vw auto;
   background-position: center;
   width: 94.7vw;
   height: 45vw;
@@ -279,14 +283,11 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   width: 26.6vw;
   height: 14.7vw;
   position: absolute;
   top: -1vw;
   left: 10.41vw;
-
-  /* сетка: 2 колонки, 2 строки для текста + место под слайдер */
   display: grid;
   grid-template-columns: 3.2vw 1fr;
   grid-template-rows: auto auto 1fr;
@@ -297,39 +298,27 @@ p {
   padding-right: 1.5vw;
   box-sizing: border-box;
 }
-
-/* убираем стандартные отступы у p */
 .message_4 > p {
   margin: 0;
   font-size: 1.04vw;
   align-self: center;
 }
-
-/* первое p = you: */
 .message_4 > p:nth-of-type(1) {
   grid-column: 1;
   grid-row: 1;
 }
-
-/* второе p = skin: */
 .message_4 > p:nth-of-type(2) {
   grid-column: 1;
   grid-row: 2;
 }
-
-/* 1-я text-line = lord */
 .message_4 > .text-line:nth-of-type(1) {
   grid-column: 2;
   grid-row: 1;
 }
-
-/* 2-я text-line = knight */
 .message_4 > .text-line:nth-of-type(2) {
   grid-column: 2;
   grid-row: 2;
 }
-
-/* сами text-line */
 .text-line {
   height: 1.5vw;
   background: #000;
@@ -349,44 +338,32 @@ p {
   content: "lord";
   animation: wordsYou 6s steps(1) infinite;
 }
-
-/* SKIN */
 .text-skin::before {
   content: "knight";
   animation: wordsSkin 6s steps(1) infinite;
 }
-
-/* текст внутри text-line */
 .text-line p {
   margin: 0;
   font-size: 1.04vw;
 }
-
-/* runner лучше посадить в 3-ю строку и двигать внутри нее */
 .runner {
   grid-column: 1 / -1;
   grid-row: 3;
-
-  position: relative; /* важно: НЕ absolute, иначе вылетит из сетки */
+  position: relative;
   width: 1.18vw;
   height: 2.11vw;
   background: #000;
-
-  align-self: start; /* подними/опусти при необходимости */
+  align-self: start;
   margin-top: -1vw;
-
   animation: slide 1.5s linear infinite alternate;
 }
-
 .messages_5 {
-  position: relative; /* чтобы окна позиционировались внутри этого блока */
+  position: relative;
   width: 100%;
   height: 100%;
   top: 14vw;
   right: 7vw;
 }
-
-/* общие стили окон */
 .message_5_1,
 .message_5_2,
 .message_5_3,
@@ -398,27 +375,22 @@ p {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
   position: absolute;
-
-  display: flex; /* центрируем текст */
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  padding-top: 0.8vw; /* лёгкий сдвиг вниз из-за красной шапки */
+  padding-top: 0.8vw;
   box-sizing: border-box;
 }
-
 .message_5_1 p,
 .message_5_2 p,
 .message_5_3 p,
 .message_5_4 p {
   margin: 0;
   text-align: center;
-  font-size: 1.5vw; /* подгони под макет */
+  font-size: 1.5vw;
 }
-
-/* раскладка “лесенкой” как на скрине (подгони top/left под своё окно) */
 .message_5_1 {
   top: 1vw;
   left: 6vw;
@@ -445,22 +417,22 @@ p {
 .message_5_4 {
   transition: transform 0.2s ease, z-index 0s;
 }
-
-/* при наведении */
 .message_5_1:hover,
 .message_5_2:hover,
 .message_5_3:hover,
 .message_5_4:hover {
-  z-index: 999; /* поверх всех */
-  transform: translateY(-0.3vw); /* лёгкий “выплыв” */
+  z-index: 999;
+  transform: translateY(-0.3vw);
 }
+
+/*третий экран*/
 .screen_3 {
   display: flex;
   width: 100%;
   height: 100%;
   gap: 0;
   flex-direction: column;
-  margin: 2.6vw;
+  margin: 2.6vw auto;
   background-position: center;
   width: 94.7vw;
   height: 51vw;
@@ -529,7 +501,6 @@ p {
   position: relative; /* КЛЮЧЕВО */
   cursor: pointer;
 }
-
 .block_3_screen_3 {
   width: 100%;
   overflow: hidden;
@@ -613,13 +584,14 @@ p {
   animation: sway 2.2s ease-in-out infinite;
 }
 
+/*четвертый экран*/
 .screen_4 {
   display: flex;
   width: 100%;
   height: 100%;
   gap: 0;
   flex-direction: column;
-  margin: 2.6vw;
+  margin: 2.6vw auto;
   background-position: center;
   width: 94.7vw;
   height: 51vw;
@@ -637,21 +609,18 @@ p {
   background-repeat: no-repeat;
   z-index: 999999;
 }
-
 .catA {
   width: 11vw;
   height: 14.5vw;
   background-image: url("../images/jumping-cat_1.svg");
   animation: catJumpA 3.2s steps(7) infinite;
 }
-
 .catB {
   width: 9.4vw;
   height: 9.5vw;
   background-image: url("../images/jumping-cat_2.svg");
   animation: catJumpB 3.2s steps(7) infinite;
 }
-
 .block_1_screen_4 {
   width: 100%;
   white-space: nowrap;
@@ -680,7 +649,6 @@ p {
 .text-background_3 h2 {
   size: contain;
 }
-
 .dots-img {
   display: inline-flex;
   gap: 0.8vw;
@@ -688,15 +656,12 @@ p {
   left: 60vw;
   top: 6vw;
 }
-
 .dots-img i {
   width: 1.5vw;
   height: 1.5vw;
   background: url("../images/dot.svg") center/contain no-repeat;
   opacity: 0;
 }
-
-/* поочерёдное появление */
 .dots-img i:nth-child(1) {
   animation: dot 1.2s infinite;
 }
@@ -706,7 +671,6 @@ p {
 .dots-img i:nth-child(3) {
   animation: dot 1.2s infinite 0.8s;
 }
-
 .screen_4_block-container {
   display: flex;
   flex-direction: row;
@@ -789,11 +753,9 @@ p {
   border-right: 0.1vw solid black;
   animation: typing 6s steps(10, end) infinite, blink 0.75s step-end infinite;
 }
-
 #searching {
   margin: 0;
 }
-
 .icon {
   background-image: url("../images/search.svg");
   background-size: cover;
@@ -815,7 +777,6 @@ p {
   margin-top: 10vw;
   left: 2.6vw;
 }
-
 .lore {
   background-image: url("../images/window_7.svg");
   background-size: contain;
@@ -836,13 +797,13 @@ p {
   size: contain;
 }
 
+/*пятый экран*/
 .screen_5 {
   display: flex;
-  width: 100%;
   height: 100%;
   gap: 0;
   flex-direction: column;
-  margin: 2.6vw;
+  margin: 2.6vw auto;
   background-position: center;
   width: 94.7vw;
 }
@@ -855,7 +816,6 @@ p {
   width: 100%;
   height: 5.2vw;
 }
-
 .marquee-text_2 {
   margin-top: 0.5vw;
   display: inline-block;
@@ -989,13 +949,15 @@ p {
 .centr {
   white-space: nowrap;
 }
+
+/*подвал*/
 .footer {
   display: flex;
   width: 100%;
   height: 100%;
   gap: 0;
   flex-direction: column;
-  margin: 2.6vw;
+  margin: 2.6vw auto;
   background-position: center;
   width: 100%;
   height: 28vw;
@@ -1117,7 +1079,6 @@ p {
   justify-content: center;
   white-space: nowrap;
 }
-
 .name-text {
   margin: 0;
   position: absolute;
